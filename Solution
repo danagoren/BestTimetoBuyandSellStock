@@ -1,0 +1,17 @@
+public class Solution {
+    public int MaxProfit(int[] prices) {
+        int i=1; int sum=0;
+        int current=prices[0];
+        while (i<prices.Length){
+            if (prices[i]>current){
+                sum += prices[i]-current;
+                current = prices[i];
+            }
+            else{
+                current = prices[i];
+            }
+            i++;
+        }
+        return sum;
+    }
+}
